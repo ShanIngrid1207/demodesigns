@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Scottsdale Sales Training | Sales Coaching &amp; Workshops, Scottsdale AZ</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Sales training, coaching and team workshops in Scottsdale, Arizona. Bento services, real results, and a free discovery call. Call (480) 555-1234.">
+<meta property="og:title" content="Scottsdale Sales Training | Scottsdale, AZ">
+<meta property="og:description" content="Expert sales coaching and custom training programs. Real, measurable results.">
+<meta property="og:type" content="website">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config={theme:{extend:{
+  colors:{page:'#E8E2D4',herobg:'#CFC8B8',card:'#FFFFFF',ink:'#1B1813',inksoft:'#5A5346',mute:'#8C8472',gold:'#B0801F',goldsoft:'#C9A24A',line:'rgba(27,24,19,.12)'},
+  fontFamily:{sans:['Inter','sans-serif'],display:['"Playfair Display"','serif']},
+  borderRadius:{'2xl':'1rem','3xl':'1.5rem','hero':'28px'}
+}}}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
+<style>
+  html{scroll-behavior:smooth}
+  body{font-family:Inter,sans-serif;-webkit-font-smoothing:antialiased;background:#E8E2D4}
+  .accent{font-family:"Playfair Display",serif;font-style:italic;font-weight:500;color:#B0801F}
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .8s cubic-bezier(.22,1,.36,1),transform .8s cubic-bezier(.22,1,.36,1)}
+  .reveal.in{opacity:1;transform:none}
+  .zoomimg{transition:transform .9s cubic-bezier(.16,.84,.3,1)}.group:hover .zoomimg{transform:scale(1.05)}
+  .car{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none}
+  .car::-webkit-scrollbar{display:none}.car-card{scroll-snap-align:start;flex:0 0 88%}
+  @media(min-width:768px){.car-card{flex:0 0 calc(33.333% - 11px)}}
+  .car-dot{width:7px;height:7px;border-radius:99px;background:rgba(27,24,19,.2);transition:.3s}.car-dot.on{background:#B0801F;width:22px}
+  details>summary{list-style:none;cursor:pointer}details>summary::-webkit-details-marker{display:none}
+  details[open] .faq-ic{transform:rotate(45deg)}
+  @media(prefers-reduced-motion:reduce){.reveal{opacity:1!important;transform:none!important;transition:none!important}}
+</style>
+</head>
+<body class="text-ink">
+<div class="max-w-[1400px] mx-auto px-3 py-3 sm:px-5 sm:py-5">
+
+  <!-- NAVBAR -->
+  <header class="bg-card rounded-2xl shadow-[0_8px_30px_rgba(27,24,19,.08)] px-5 py-3.5 flex items-center justify-between gap-4 relative z-30">
+    <a href="#" class="flex items-center shrink-0"><img src="FullLogo%20Wide.jpg" alt="Scottsdale Sales Training" class="h-10 sm:h-11 w-auto rounded-lg"></a>
+    <nav class="hidden lg:flex items-center gap-9 text-[13px] font-bold uppercase tracking-[0.12em] text-inksoft">
+      <a href="#services" class="hover:text-ink">Programs</a>
+      <a href="#work" class="hover:text-ink">Work</a>
+      <a href="#faq" class="hover:text-ink">FAQ</a>
+      <a href="#contact" class="hover:text-ink">Contact</a>
+    </nav>
+    <a href="#contact" class="hidden sm:inline-flex bg-gold text-white text-[13px] font-bold uppercase tracking-[0.12em] rounded-xl px-6 py-3.5 hover:bg-ink transition">Book a call</a>
+    <button id="burger" class="lg:hidden w-9 h-9 grid place-items-center" aria-label="Menu"><svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+  </header>
+  <div id="menu" class="lg:hidden hidden bg-card rounded-2xl shadow-lg mt-2 p-4">
+    <a href="#services" class="block py-2.5 text-[15px] border-b border-line">Programs</a>
+    <a href="#work" class="block py-2.5 text-[15px] border-b border-line">Work</a>
+    <a href="#faq" class="block py-2.5 text-[15px] border-b border-line">FAQ</a>
+    <a href="#contact" class="block py-2.5 text-[15px]">Contact</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="relative mt-3 sm:mt-5 rounded-hero overflow-hidden bg-herobg px-6 pt-16 pb-16 lg:px-20 lg:pt-24 lg:pb-20 min-h-[540px] flex items-center">
+    <img class="absolute inset-0 w-full h-full object-cover" style="object-position:75% 30%" src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=1600&q=80" alt="Sales coaching session">
+    <div class="absolute inset-0 bg-gradient-to-r from-black/60 via-black/35 to-transparent md:from-black/55 md:via-black/15"></div>
+    <div class="relative z-10 max-w-xl text-white reveal in">
+      <h1 class="text-[34px] sm:text-[48px] lg:text-[56px] font-semibold tracking-tight leading-[1.08]">Expert coaching.<br>Real, <span class="accent">measurable</span> results.</h1>
+      <p class="mt-5 max-w-md text-[17px] leading-relaxed text-white/85">Sales training built around your real deals, scripts and process, so the skills land in real conversations and stick.</p>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href="#contact" class="bg-gold text-white text-[13px] font-bold uppercase tracking-[0.12em] rounded-xl px-7 py-4 hover:bg-ink transition">Book a call</a>
+        <a href="#services" class="border border-white/40 text-white text-[13px] font-bold uppercase tracking-[0.12em] rounded-xl px-7 py-4 hover:bg-white hover:text-ink transition">Our programs</a>
+      </div>
+      <div class="mt-9 flex items-center gap-4">
+        <div class="flex -space-x-3">
+          <img class="w-10 h-10 rounded-full object-cover ring-2 ring-herobg" src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=120&q=80" alt="">
+          <img class="w-10 h-10 rounded-full object-cover ring-2 ring-herobg" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=120&q=80" alt="">
+          <img class="w-10 h-10 rounded-full object-cover ring-2 ring-herobg" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80" alt="">
+          <span class="w-10 h-10 rounded-full bg-ink text-white text-[11px] font-bold grid place-items-center ring-2 ring-herobg">2.5K+</span>
+        </div>
+        <span class="text-[13px] text-white/80">2,500+ reps already trained</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENTO SERVICES -->
+  <section id="services" class="reveal mt-8 sm:mt-12">
+    <div class="px-2 sm:px-4 mb-6 max-w-2xl"><p class="text-[12px] font-bold uppercase tracking-[0.16em] text-gold">What we do</p><h2 class="text-3xl sm:text-5xl font-semibold tracking-tight mt-3">Programs built around your team</h2></div>
+    <div class="grid grid-cols-2 md:grid-cols-4 auto-rows-[150px] md:auto-rows-[180px] gap-3 sm:gap-4">
+      <a href="#contact" class="group relative col-span-2 row-span-2 rounded-hero overflow-hidden">
+        <img class="zoomimg absolute inset-0 w-full h-full object-cover" src="https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=1100&q=80" alt="Team workshops">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
+        <div class="absolute left-6 bottom-6 right-6 text-white"><div class="text-[12px] uppercase tracking-[0.16em] text-white/70">Most booked</div><div class="text-2xl sm:text-3xl font-semibold mt-1">Sales Team Workshops</div></div>
+      </a>
+      <div class="col-span-1 row-span-1 rounded-3xl bg-card p-5 flex flex-col justify-between"><div class="text-[12px] uppercase tracking-[0.14em] text-mute">Coaching</div><div class="font-semibold">1-on-1, weekly</div></div>
+      <div class="col-span-1 row-span-1 rounded-3xl bg-gold text-white p-5 flex flex-col justify-between"><div class="text-[12px] uppercase tracking-[0.14em] text-white/70">Leadership</div><div class="font-semibold">Coach &amp; forecast</div></div>
+      <a href="#work" class="group col-span-2 row-span-1 relative rounded-3xl overflow-hidden">
+        <img class="zoomimg absolute inset-0 w-full h-full object-cover" src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=1100&q=80" alt="Keynotes">
+        <div class="absolute inset-0 bg-gradient-to-r from-black/65 to-black/10"></div>
+        <div class="absolute left-5 top-1/2 -translate-y-1/2 text-white"><div class="text-lg font-semibold">Keynotes &amp; Kickoffs</div><div class="text-[13px] text-white/70">Any room size</div></div>
+      </a>
+      <div class="col-span-1 row-span-1 rounded-3xl bg-ink text-white p-5 flex flex-col justify-between"><div class="text-[12px] uppercase tracking-[0.14em] text-white/55">Prospecting</div><div class="font-semibold text-goldsoft">More meetings</div></div>
+      <div class="col-span-1 row-span-1 rounded-3xl bg-card p-5 flex flex-col justify-between"><div class="text-[12px] uppercase tracking-[0.14em] text-mute">Closing</div><div class="font-semibold">Protect margin</div></div>
+    </div>
+  </section>
+
+  <!-- WORK GALLERY (lightbox) -->
+  <section id="work" class="reveal mt-8 sm:mt-12 bg-card rounded-hero px-6 sm:px-12 py-14 sm:py-20">
+    <div class="max-w-2xl mb-8"><p class="text-[12px] font-bold uppercase tracking-[0.16em] text-gold">Inside the room</p><h2 class="text-3xl sm:text-5xl font-semibold tracking-tight mt-3">Real sessions, real reps</h2></div>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
+      <button class="lb group rounded-3xl overflow-hidden aspect-square" data-src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1400&q=80"><img class="zoomimg w-full h-full object-cover" src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=600&q=80" alt="Workshop"></button>
+      <button class="lb group rounded-3xl overflow-hidden aspect-square" data-src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1400&q=80"><img class="zoomimg w-full h-full object-cover" src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=600&q=80" alt="Whiteboard session"></button>
+      <button class="lb group rounded-3xl overflow-hidden aspect-square" data-src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1400&q=80"><img class="zoomimg w-full h-full object-cover" src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=600&q=80" alt="Coaching"></button>
+      <button class="lb group rounded-3xl overflow-hidden aspect-square" data-src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=1400&q=80"><img class="zoomimg w-full h-full object-cover" src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=600&q=80" alt="Team"></button>
+    </div>
+    <!-- COUNTERS -->
+    <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 text-center border-t border-line pt-10">
+      <div><div class="text-4xl sm:text-5xl font-semibold text-gold" data-count="2500" data-suffix="+">0</div><div class="mt-1.5 text-[13px] text-inksoft">Reps trained</div></div>
+      <div><div class="text-4xl sm:text-5xl font-semibold text-gold" data-count="38" data-suffix="%">0</div><div class="mt-1.5 text-[13px] text-inksoft">Win-rate lift</div></div>
+      <div><div class="text-4xl sm:text-5xl font-semibold text-gold" data-count="15" data-suffix="+">0</div><div class="mt-1.5 text-[13px] text-inksoft">Years</div></div>
+      <div><div class="text-4xl sm:text-5xl font-semibold text-gold" data-count="49" data-divide="10" data-suffix="/5">0</div><div class="mt-1.5 text-[13px] text-inksoft">Client rating</div></div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS CAROUSEL -->
+  <section class="reveal mt-8 sm:mt-12" data-carousel data-auto>
+    <div class="px-2 sm:px-4 mb-6 max-w-2xl flex items-end justify-between">
+      <div><p class="text-[12px] font-bold uppercase tracking-[0.16em] text-gold">Reviews</p><h2 class="text-3xl sm:text-4xl font-semibold tracking-tight mt-3">Teams that win more</h2></div>
+    </div>
+    <div class="car px-2 sm:px-4 pb-1" data-track>
+      <figure class="car-card rounded-hero bg-card p-7"><div class="text-gold text-lg mb-3">★★★★★</div><blockquote class="text-[15px] leading-relaxed text-ink/85">Our close rate jumped 30% in one quarter. The role-play sessions changed how my reps handle objections.</blockquote><figcaption class="mt-5 flex items-center gap-3"><img class="w-10 h-10 rounded-full object-cover" src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=120&q=80" alt=""><span><b class="block text-[14px]">Marcus Delgado</b><span class="text-[12px] text-mute">VP Sales, SaaS</span></span></figcaption></figure>
+      <figure class="car-card rounded-hero bg-card p-7"><div class="text-gold text-lg mb-3">★★★★★</div><blockquote class="text-[15px] leading-relaxed text-ink/85">Best sales investment we've made. The follow-up coaching kept it from fading after the workshop.</blockquote><figcaption class="mt-5 flex items-center gap-3"><img class="w-10 h-10 rounded-full object-cover" src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=120&q=80" alt=""><span><b class="block text-[14px]">Dana Russo</b><span class="text-[12px] text-mute">Founder, agency</span></span></figcaption></figure>
+      <figure class="car-card rounded-hero bg-card p-7"><div class="text-gold text-lg mb-3">★★★★★</div><blockquote class="text-[15px] leading-relaxed text-ink/85">New hires used to take six months to ramp. After this program they hit quota in eight weeks.</blockquote><figcaption class="mt-5 flex items-center gap-3"><img class="w-10 h-10 rounded-full object-cover" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=120&q=80" alt=""><span><b class="block text-[14px]">Eric Lindqvist</b><span class="text-[12px] text-mute">Sales Director</span></span></figcaption></figure>
+      <figure class="car-card rounded-hero bg-card p-7"><div class="text-gold text-lg mb-3">★★★★★</div><blockquote class="text-[15px] leading-relaxed text-ink/85">The discovery framework alone paid for the whole engagement. Bigger deals, shorter cycles.</blockquote><figcaption class="mt-5 flex items-center gap-3"><img class="w-10 h-10 rounded-full object-cover" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80" alt=""><span><b class="block text-[14px]">Priya Nair</b><span class="text-[12px] text-mute">RevOps, fintech</span></span></figcaption></figure>
+    </div>
+    <div data-dots class="flex gap-2 mt-6 px-2 sm:px-4"></div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="reveal mt-8 sm:mt-12 bg-card rounded-hero px-6 sm:px-12 py-14 sm:py-20">
+    <div class="grid lg:grid-cols-[0.8fr_1.2fr] gap-8 lg:gap-16">
+      <div><p class="text-[12px] font-bold uppercase tracking-[0.16em] text-gold">FAQ</p><h2 class="text-3xl sm:text-4xl font-semibold tracking-tight mt-3">Questions, answered</h2></div>
+      <div class="divide-y divide-line">
+        <details class="py-5"><summary class="flex items-center justify-between gap-4 text-[17px] font-semibold">How fast can you start?<span class="faq-ic text-gold text-2xl leading-none transition-transform">+</span></summary><p class="mt-3 text-[15px] text-inksoft">Most teams start within two weeks. We scope your goals on the discovery call and send a plan with dates.</p></details>
+        <details class="py-5"><summary class="flex items-center justify-between gap-4 text-[17px] font-semibold">Do you train remote teams?<span class="faq-ic text-gold text-2xl leading-none transition-transform">+</span></summary><p class="mt-3 text-[15px] text-inksoft">Yes. Workshops and coaching run on-site, virtual, or hybrid, with the same role-play driven format.</p></details>
+        <details class="py-5"><summary class="flex items-center justify-between gap-4 text-[17px] font-semibold">Is it built around our product?<span class="faq-ic text-gold text-2xl leading-none transition-transform">+</span></summary><p class="mt-3 text-[15px] text-inksoft">Always. We build on your real deals, scripts and process so the skills transfer to live conversations.</p></details>
+        <details class="py-5"><summary class="flex items-center justify-between gap-4 text-[17px] font-semibold">What size teams do you work with?<span class="faq-ic text-gold text-2xl leading-none transition-transform">+</span></summary><p class="mt-3 text-[15px] text-inksoft">From solo founders to 100+ rep org. Workshops cap at 20 per session for hands-on practice.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEAD FORM -->
+  <section id="contact" class="reveal mt-8 sm:mt-12 bg-ink text-white rounded-hero px-6 sm:px-12 py-14 sm:py-20">
+    <div class="grid lg:grid-cols-2 gap-10 lg:gap-16">
+      <div>
+        <p class="text-[12px] font-bold uppercase tracking-[0.16em] text-goldsoft">Get in touch</p>
+        <h2 class="text-3xl sm:text-5xl font-semibold tracking-tight mt-3">Ready to close <span class="accent">more deals?</span></h2>
+        <p class="mt-5 text-[16px] text-white/70 max-w-md">Tell us about your team and we'll come back within one business day with a plan, or book a free 20-minute call now.</p>
+        <a href="tel:+14805551234" class="mt-7 inline-flex items-center gap-2 text-[16px] font-semibold text-goldsoft hover:text-white"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.6a1 1 0 0 1-.25 1l-2.2 2.2z"/></svg>(480) 555-1234</a>
+      </div>
+      <form id="leadform" action="/api/lead" method="post" class="space-y-4">
+        <input type="text" name="company_website" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true">
+        <div class="grid sm:grid-cols-2 gap-4">
+          <label class="block"><span class="text-[13px] text-white/60">Name</span><input required name="name" class="mt-1.5 w-full bg-white/[.06] border border-white/15 rounded-xl px-4 py-3 text-[15px] placeholder-white/30 focus:border-goldsoft focus:outline-none" placeholder="Your name"></label>
+          <label class="block"><span class="text-[13px] text-white/60">Company</span><input name="company" class="mt-1.5 w-full bg-white/[.06] border border-white/15 rounded-xl px-4 py-3 text-[15px] placeholder-white/30 focus:border-goldsoft focus:outline-none" placeholder="Company"></label>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-4">
+          <label class="block"><span class="text-[13px] text-white/60">Email</span><input required type="email" name="email" class="mt-1.5 w-full bg-white/[.06] border border-white/15 rounded-xl px-4 py-3 text-[15px] placeholder-white/30 focus:border-goldsoft focus:outline-none" placeholder="you@company.com"></label>
+          <label class="block"><span class="text-[13px] text-white/60">Team size</span><input name="team" class="mt-1.5 w-full bg-white/[.06] border border-white/15 rounded-xl px-4 py-3 text-[15px] placeholder-white/30 focus:border-goldsoft focus:outline-none" placeholder="e.g. 8 reps"></label>
+        </div>
+        <label class="block"><span class="text-[13px] text-white/60">What do you want to improve?</span><textarea name="message" rows="3" class="mt-1.5 w-full bg-white/[.06] border border-white/15 rounded-xl px-4 py-3 text-[15px] placeholder-white/30 focus:border-goldsoft focus:outline-none" placeholder="Objection handling, ramp time, closing..."></textarea></label>
+        <button type="submit" class="w-full bg-goldsoft text-ink font-bold uppercase tracking-[0.1em] text-[14px] rounded-xl px-6 py-4 hover:bg-white transition">Request my plan</button>
+        <p id="formmsg" class="text-[14px] text-goldsoft hidden">Thanks! We'll be in touch within one business day.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="px-2 sm:px-6 py-12">
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
+      <img src="FullLogo%20Wide.jpg" alt="Scottsdale Sales Training" class="h-10 w-auto rounded-lg">
+      <p class="text-[13px] text-inksoft">© <span id="yr">2026</span> Scottsdale Sales Training · Scottsdale, AZ · <a href="tel:+14805551234" class="hover:text-gold">(480) 555-1234</a></p>
+    </div>
+  </footer>
+
+</div>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/85 p-5">
+  <img id="lb-img" class="max-w-full max-h-[88vh] rounded-2xl" src="" alt="">
+  <button id="lb-close" class="absolute top-5 right-5 w-11 h-11 rounded-full bg-white/15 text-white grid place-items-center hover:bg-white/25" aria-label="Close"><svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+</div>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"LocalBusiness","name":"Scottsdale Sales Training","description":"Sales training, coaching and team workshops in Scottsdale, Arizona.","areaServed":"Scottsdale, AZ","telephone":"+1-480-555-1234","email":"hello@scottsdalesalestraining.com","address":{"@type":"PostalAddress","addressLocality":"Scottsdale","addressRegion":"AZ","addressCountry":"US"},"openingHours":"Mo-Fr 08:00-17:00"}
+</script>
+<script>
+(function(){
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var yr=document.getElementById('yr'); if(yr) yr.textContent=new Date().getFullYear();
+  var burger=document.getElementById('burger'),menu=document.getElementById('menu');
+  if(burger){burger.addEventListener('click',function(){menu.classList.toggle('hidden');});menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){menu.classList.add('hidden');});});}
+
+  var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.1});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+
+  // counters
+  var cio=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){count(e.target);cio.unobserve(e.target);}});},{threshold:.5});
+  document.querySelectorAll('[data-count]').forEach(function(el){cio.observe(el);});
+  function count(el){var t=+el.dataset.count,div=+el.dataset.divide||1,suf=el.dataset.suffix||'',d=1100,s=performance.now();
+    if(reduce){el.textContent=(t/div)+suf;return;}
+    function f(n){var p=Math.min((n-s)/d,1),v=t*p;el.textContent=(div>1?(v/div).toFixed(1):Math.floor(v))+suf;if(p<1)requestAnimationFrame(f);}requestAnimationFrame(f);}
+
+  // carousel
+  document.querySelectorAll('[data-carousel]').forEach(function(root){
+    var track=root.querySelector('[data-track]'),dotsWrap=root.querySelector('[data-dots]');
+    function step(){var c=track.firstElementChild;return c?c.getBoundingClientRect().width+16:track.clientWidth*.8;}
+    var cards=[].slice.call(track.children);
+    if(dotsWrap){cards.forEach(function(_,i){var d=document.createElement('button');d.className='car-dot'+(i===0?' on':'');d.addEventListener('click',function(){track.scrollTo({left:i*step(),behavior:'smooth'});});dotsWrap.appendChild(d);});
+      var dots=[].slice.call(dotsWrap.children);track.addEventListener('scroll',function(){var idx=Math.round(track.scrollLeft/step());dots.forEach(function(d,i){d.classList.toggle('on',i===idx);});},{passive:true});}
+    if(root.hasAttribute('data-auto')&&!reduce){var timer=setInterval(function(){var max=track.scrollWidth-track.clientWidth-4;if(track.scrollLeft>=max)track.scrollTo({left:0,behavior:'smooth'});else track.scrollBy({left:step(),behavior:'smooth'});},5000);root.addEventListener('mouseenter',function(){clearInterval(timer);});}
+  });
+
+  // lightbox
+  var lb=document.getElementById('lightbox'),lbi=document.getElementById('lb-img');
+  document.querySelectorAll('.lb').forEach(function(b){b.addEventListener('click',function(){lbi.src=b.dataset.src;lb.classList.remove('hidden');lb.classList.add('flex');});});
+  function closeLb(){lb.classList.add('hidden');lb.classList.remove('flex');lbi.src='';}
+  document.getElementById('lb-close').addEventListener('click',closeLb);
+  lb.addEventListener('click',function(e){if(e.target===lb)closeLb();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeLb();});
+
+  // form (demo: wire to /api/lead on deploy)
+  var f=document.getElementById('leadform');
+  if(f)f.addEventListener('submit',function(e){e.preventDefault();if(f.company_website.value)return;document.getElementById('formmsg').classList.remove('hidden');f.reset();});
+})();
+</script>
+</body>
+</html>
