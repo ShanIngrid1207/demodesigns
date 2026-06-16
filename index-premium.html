@@ -415,7 +415,7 @@ tailwind.config = {
 
 <script>
 (function(){
-  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var reduce = (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) || /(?:^|[?&])preview\b/.test(location.search);
   var yr=document.getElementById('yr'); if(yr) yr.textContent=new Date().getFullYear();
 
   // headline / description word reveal

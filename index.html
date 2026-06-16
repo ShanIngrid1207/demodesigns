@@ -153,7 +153,7 @@ footer p{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transf
 
 <script>
 (function(){
-  var DESK={w:1280,h:800},MOB={w:390,h:780};
+  var DESK={w:1440,h:900},MOB={w:390,h:780};
   var mode='desk';
   var cards=Array.prototype.slice.call(document.querySelectorAll('.dcard'));
 
@@ -181,7 +181,8 @@ footer p{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transf
     var pv=card.querySelector('.preview');
     if(pv.querySelector('iframe'))return;
     var f=document.createElement('iframe');
-    f.src=card.getAttribute('data-src');
+    var src=card.getAttribute('data-src');
+    f.src=src+(src.indexOf('?')<0?'?preview':'&preview');
     f.title='Live preview';
     f.loading='lazy';
     pv.appendChild(f);

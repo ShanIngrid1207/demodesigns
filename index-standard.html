@@ -192,17 +192,23 @@ tailwind.config={theme:{extend:{
 </script>
 <script>
 (function(){
-  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var PREVIEW=/(?:^|[?&])preview\b/.test(location.search);
+  var reduce=(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)||PREVIEW;
   var yr=document.getElementById('yr'); if(yr) yr.textContent=new Date().getFullYear();
   var burger=document.getElementById('burger'),menu=document.getElementById('menu');
   if(burger){burger.addEventListener('click',function(){menu.classList.toggle('hidden');});menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){menu.classList.add('hidden');});});}
 
-  var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.1});
-  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+  if(PREVIEW){
+    document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in');});
+    document.querySelectorAll('[data-count]').forEach(function(el){count(el);});
+  } else {
+    var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.1});
+    document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
 
-  // counters
-  var cio=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){count(e.target);cio.unobserve(e.target);}});},{threshold:.5});
-  document.querySelectorAll('[data-count]').forEach(function(el){cio.observe(el);});
+    // counters
+    var cio=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){count(e.target);cio.unobserve(e.target);}});},{threshold:.5});
+    document.querySelectorAll('[data-count]').forEach(function(el){cio.observe(el);});
+  }
   function count(el){var t=+el.dataset.count,div=+el.dataset.divide||1,suf=el.dataset.suffix||'',d=1100,s=performance.now();
     if(reduce){el.textContent=(t/div)+suf;return;}
     function f(n){var p=Math.min((n-s)/d,1),v=t*p;el.textContent=(div>1?(v/div).toFixed(1):Math.floor(v))+suf;if(p<1)requestAnimationFrame(f);}requestAnimationFrame(f);}
