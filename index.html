@@ -2,181 +2,224 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Scottsdale Sales Training | Compare Homepage Designs</title>
+<title>Scottsdale Sales Training — Package Showcase</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=EB+Garamond:ital@1&family=Hanken+Grotesk:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --bg:#EFEDE8;--bar:#FFFFFF;--ink:#191613;--mute:#6E6760;--line:rgba(25,22,19,.12);
-    --accent:#191613;
-    --display:"Space Grotesk",sans-serif;--sans:"Inter",sans-serif;--ease:cubic-bezier(.16,.84,.3,1);
-  }
-  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-  html,body{height:100%}
-  body{font-family:var(--sans);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;
-    display:flex;flex-direction:column;min-height:100%;overflow:hidden}
-  a{color:inherit;text-decoration:none}
-  button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+:root{
+  --paper:#F5F1E9;--card:#FCFAF4;--ink:#1C1812;--ink-2:#4A4438;--mute:#8B8270;
+  --line:#E0D8C6;--line-2:#CBC1AA;--terra:#B96A2E;--terra-deep:#9A551F;
+  --serif:'Marcellus',serif;--ital:'EB Garamond',serif;--sans:'Hanken Grotesk',sans-serif;--mono:'JetBrains Mono',monospace;
+  --eo:cubic-bezier(.23,1,.32,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--paper);color:var(--ink);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+::selection{background:var(--terra);color:#fff}
+:focus-visible{outline:2px solid var(--terra-deep);outline-offset:3px;border-radius:2px}
+.wrap{max-width:1480px;margin:0 auto;padding:0 clamp(20px,3vw,44px)}
 
-  /* Toolbar */
-  .bar{flex:0 0 auto;background:var(--bar);color:var(--ink);display:flex;align-items:center;gap:1rem;
-    padding:.8rem 1.2rem;flex-wrap:wrap;box-shadow:0 2px 14px rgba(25,22,19,.07);z-index:10;border-bottom:1px solid var(--line)}
-  .bar__title{display:flex;flex-direction:column;line-height:1.15;margin-right:auto}
-  .bar__title b{font-family:var(--display);font-weight:700;font-size:1.12rem;letter-spacing:-.02em}
-  .bar__title span{font-size:.7rem;letter-spacing:.13em;text-transform:uppercase;color:var(--mute)}
-  .seg{display:inline-flex;background:#F1EFEA;border:1px solid var(--line);border-radius:100px;padding:3px}
-  .seg button{font-size:.82rem;font-weight:600;padding:.45em 1em;border-radius:100px;color:var(--mute);transition:.25s var(--ease)}
-  .seg button.on{background:var(--accent);color:#fff}
-  .toggle{display:inline-flex;align-items:center;gap:.5em;font-size:.82rem;font-weight:600;color:var(--ink)}
-  .toggle input{accent-color:var(--accent);width:16px;height:16px}
-  .bar .hint{font-size:.74rem;color:var(--mute)}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.1;text-wrap:balance}
+em{font-family:var(--ital);font-style:italic;color:var(--terra-deep)}
+.mlabel{font-family:var(--mono);font-size:10.5px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--mute)}
 
-  /* Stage */
-  .stage{flex:1 1 auto;overflow-x:hidden;overflow-y:auto;padding:26px;scroll-behavior:smooth;
-    background:
-      radial-gradient(circle at 1px 1px,rgba(25,22,19,.06) 1px,transparent 0) 0 0/22px 22px,
-      var(--bg)}
-  .rail{display:flex;flex-direction:column;gap:40px;align-items:center;width:100%}
+/* top bar */
+.bar{position:sticky;top:0;z-index:40;background:rgba(245,241,233,.88);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.bar .in{display:flex;align-items:center;justify-content:space-between;gap:16px;height:70px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:11px}
+.brand .mark{width:36px;height:36px;border-radius:8px;background:var(--ink);color:var(--paper);display:grid;place-items:center;font-family:var(--serif);font-size:19px}
+.brand .t b{font-family:var(--serif);font-weight:400;font-size:17px;display:block;line-height:1.15}
+.brand .t span{font-family:var(--mono);font-size:8.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--mute)}
+.bar-right{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.seg{display:inline-flex;background:#ECE6D9;border:1px solid var(--line);border-radius:99px;padding:3px}
+.seg button{font-family:var(--mono);font-size:11px;letter-spacing:.08em;font-weight:500;padding:.55em 1.2em;border-radius:99px;color:var(--mute);border:0;background:none;cursor:pointer;transition:.25s var(--eo);text-transform:uppercase}
+.seg button.on{background:var(--ink);color:#fff}
+.bench{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);border:1px solid var(--line-2);border-radius:99px;padding:9px 16px;transition:.25s}
+.bench:hover{border-color:var(--ink);color:var(--ink)}
 
-  /* Phone panel */
-  .panel{flex:0 0 auto;display:flex;flex-direction:column;gap:11px;max-width:100%}
-  .panel__head{display:flex;align-items:center;justify-content:space-between;gap:.6rem}
-  .panel__label{display:flex;flex-direction:column;line-height:1.2}
-  .panel__label b{font-family:var(--display);font-weight:700;font-size:1.02rem}
-  .panel__label span{font-size:.72rem;color:var(--mute);letter-spacing:.02em}
-  .panel__open{display:inline-flex;align-items:center;gap:.35em;font-size:.78rem;font-weight:600;color:#fff;
-    border-radius:100px;padding:.45em .95em;background:var(--accent);transition:.25s var(--ease)}
-  .panel__open:hover{transform:translateY(-2px);opacity:.9}
-  .panel__open svg{width:.95em;height:.95em}
+/* hero */
+.hero{padding:clamp(44px,6vw,80px) 0 clamp(30px,4vw,52px);text-align:center}
+.hero h1{font-size:clamp(32px,4.6vw,62px);max-width:22ch;margin:14px auto 16px}
+.hero p{color:var(--ink-2);max-width:62ch;margin:0 auto;font-size:16.5px}
+.hero .mlabel{color:var(--terra-deep)}
 
-  .device{background:#fff;border-radius:30px;padding:10px;box-shadow:0 22px 50px rgba(25,22,19,.18);position:relative;border:1px solid rgba(25,22,19,.08);max-width:100%}
-  .device::before{content:"";position:absolute;top:14px;left:50%;transform:translateX(-50%);width:46px;height:5px;
-    background:rgba(25,22,19,.14);border-radius:100px;z-index:3}
-  .device iframe{display:block;border:0;border-radius:22px;background:#fff;width:min(390px,90vw);height:760px}
+/* grid of design cards */
+.deck{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(22px,2.6vw,38px);padding-bottom:clamp(60px,8vw,100px)}
+@media(max-width:1020px){.deck{grid-template-columns:1fr}}
+.dcard{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 14px 40px rgba(28,24,18,.07);display:flex;flex-direction:column}
+.dhead{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:20px 24px 16px}
+.dhead .lt{display:flex;align-items:baseline;gap:14px}
+.dhead .letter{font-family:var(--serif);font-size:15px;color:var(--terra-deep);border:1px solid var(--line-2);border-radius:50%;width:34px;height:34px;display:grid;place-items:center;align-self:center}
+.dhead h2{font-size:clamp(22px,2vw,28px)}
+.dhead .tagline{font-family:var(--ital);font-style:italic;font-size:15px;color:var(--mute)}
+.open{display:inline-flex;align-items:center;gap:.5em;font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:500;color:#fff;background:var(--ink);border-radius:99px;padding:10px 18px;transition:.25s var(--eo);flex:0 0 auto}
+.open:hover{background:var(--terra-deep);transform:translateY(-2px)}
+.open svg{width:.95em;height:.95em}
 
-  body.mode-desktop .device{border-radius:14px;padding:8px}
-  body.mode-desktop .device::before{display:none}
-  body.mode-desktop .device iframe{width:min(1100px,92vw);height:720px;border-radius:8px}
+/* live preview: scaled iframe */
+.preview{position:relative;background:#E8E2D4;border-block:1px solid var(--line);overflow:hidden}
+.preview iframe{position:absolute;top:0;left:0;border:0;transform-origin:top left;background:#fff;pointer-events:auto}
+.preview .veil{position:absolute;inset:0;z-index:2;display:grid;place-items:center;background:rgba(28,24,18,0);transition:background .3s;cursor:pointer}
+.preview .veil span{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#fff;background:rgba(28,24,18,.78);border-radius:99px;padding:9px 18px;opacity:0;transition:opacity .3s}
+.preview .veil:hover span{opacity:1}
+.preview.live .veil{display:none}
 
-  .stage::-webkit-scrollbar{height:12px;width:12px}
-  .stage::-webkit-scrollbar-thumb{background:rgba(25,22,19,.22);border-radius:100px;border:3px solid var(--bg)}
+.dbody{padding:18px 24px 24px;display:flex;flex-direction:column;gap:14px;flex:1}
+.dbody p{font-size:14.5px;color:var(--ink-2);max-width:70ch}
+.chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:auto}
+.chips span{font-family:var(--mono);font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--terra-deep);background:#F4E5D5;border-radius:99px;padding:6px 12px}
 
-  @media(max-width:560px){
-    .bar{gap:.6rem;padding:.65rem .85rem}
-    .bar__title b{font-size:1rem}
-    .stage{padding:14px}
-    .rail{gap:14px}
-    .device iframe{width:86vw;max-width:390px;height:74vh}
-    body.mode-desktop .device iframe{width:86vw;height:74vh}
-  }
+footer{border-top:1px solid var(--line);padding:34px 0 40px;text-align:center}
+footer p{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--mute);line-height:2.2}
 </style>
 </head>
-<body class="mode-desktop">
+<body>
 
 <div class="bar">
-  <div class="bar__title">
-    <b>Compare Packages</b>
-    <span>Scottsdale Sales Training · Basic · Standard · Premium</span>
-  </div>
-
-  <div class="seg" role="group" aria-label="Preview width">
-    <button id="btn-mobile">Mobile</button>
-    <button id="btn-desktop" class="on">Desktop</button>
-  </div>
-
-  <label class="toggle"><input type="checkbox" id="sync"> Sync scroll</label>
-
-  <span class="hint">Each frame scrolls on its own · scroll down to see all three</span>
-</div>
-
-<div class="stage" id="stage">
-  <div class="rail">
-
-    <div class="panel">
-      <div class="panel__head">
-        <div class="panel__label"><b>Basic</b><span>Get found · single scroll</span></div>
-        <a class="panel__open" href="index-basic.html" target="_blank" rel="noopener">Open <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
-      </div>
-      <div class="device"><iframe class="frame" data-i="0" src="index-basic.html" title="Basic" loading="eager"></iframe></div>
+  <div class="wrap in">
+    <div class="brand">
+      <span class="mark" aria-hidden="true">S</span>
+      <span class="t"><b>Scottsdale Sales Training</b><span>Package Showcase</span></span>
     </div>
-
-    <div class="panel">
-      <div class="panel__head">
-        <div class="panel__label"><b>Standard</b><span>Look established · bento, gallery, form</span></div>
-        <a class="panel__open" href="index-standard.html" target="_blank" rel="noopener">Open <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+    <div class="bar-right">
+      <div class="seg" role="group" aria-label="Preview device">
+        <button id="segDesk" class="on">Desktop</button>
+        <button id="segMob">Mobile</button>
       </div>
-      <div class="device"><iframe class="frame" data-i="1" src="index-standard.html" title="Standard" loading="eager"></iframe></div>
     </div>
-
-    <div class="panel">
-      <div class="panel__head">
-        <div class="panel__label"><b>Premium</b><span>Stand out · video, case studies, blog</span></div>
-        <a class="panel__open" href="index-premium.html" target="_blank" rel="noopener">Open <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
-      </div>
-      <div class="device"><iframe class="frame" data-i="2" src="index-premium.html" title="Premium" loading="eager"></iframe></div>
-    </div>
-
   </div>
 </div>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="mlabel">Three packages · one brand · June 2026</span>
+    <h1>Three ways to <em>close more</em></h1>
+    <p>Every package shares the Scottsdale Sales Training voice: black-and-gold confidence, real coaching imagery, and plain, action-obvious copy. They differ in depth, motion, and how much they do for you. Hover a preview to interact with it live, or open any package full screen.</p>
+  </div>
+</header>
+
+<main class="wrap deck" id="deck">
+
+  <!-- PREMIUM — headliner -->
+  <article class="dcard" data-src="index-premium.html" style="grid-column:1/-1">
+    <div class="dhead">
+      <div class="lt"><span class="letter" style="background:var(--ink);color:#fff;border-color:var(--ink)">P</span><div><h2>Premium <em style="font-size:.55em">· stand out</em></h2><span class="tagline">the full cinematic flagship</span></div></div>
+      <a class="open" href="index-premium.html" target="_blank" rel="noopener">Open <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+    </div>
+    <div class="preview"><div class="veil" role="button" tabindex="0" aria-label="Activate live preview"><span>Click to interact — then scroll the page</span></div></div>
+    <div class="dbody">
+      <p>The showpiece package: a video-ready hero, a bento "what we do" grid, an inside-the-room gallery, a results carousel, and a coaches lineup led by founder Brad. Full editorial motion — word-by-word headline reveals, ken-burns image zooms, animated counters, swipeable carousels — with a lead form, LocalBusiness schema, and full OG/SEO baked in. The most polished read of the brand.</p>
+      <div class="chips"><span>Video-ready hero</span><span>Bento services</span><span>Inside-the-room gallery</span><span>Results carousel</span><span>Coaches · founder Brad</span><span>Animated counters</span><span>OG + schema SEO</span></div>
+    </div>
+  </article>
+
+  <!-- BASIC -->
+  <article class="dcard" data-src="index-basic.html">
+    <div class="dhead">
+      <div class="lt"><span class="letter">B</span><div><h2>Basic</h2><span class="tagline">get found</span></div></div>
+      <a class="open" href="index-basic.html" target="_blank" rel="noopener">Open <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+    </div>
+    <div class="preview"><div class="veil" role="button" tabindex="0" aria-label="Activate live preview"><span>Click to interact</span></div></div>
+    <div class="dbody">
+      <p>One clean single-scroll page: an image hero, an About section with founder Brad and the headline stats, a services grid, and a contact block with click-to-call, hours, and a map. Gentle fade-ins, fast loading, and LocalBusiness schema so the business shows up in local search. Built to get found and get the call.</p>
+      <div class="chips"><span>Single scroll</span><span>Founder · Brad</span><span>Click-to-call</span><span>Map</span><span>LocalBusiness schema</span></div>
+    </div>
+  </article>
+
+  <!-- STANDARD -->
+  <article class="dcard" data-src="index-standard.html">
+    <div class="dhead">
+      <div class="lt"><span class="letter">S</span><div><h2>Standard</h2><span class="tagline">look established</span></div></div>
+      <a class="open" href="index-standard.html" target="_blank" rel="noopener">Open <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+    </div>
+    <div class="preview"><div class="veil" role="button" tabindex="0" aria-label="Activate live preview"><span>Click to interact</span></div></div>
+    <div class="dbody">
+      <p>A longer, polished page that builds trust: a bento services grid, an inside-the-room gallery with lightbox, animated result counters, a testimonials carousel, and an FAQ — plus a lead form that saves and emails you. Full OG/SEO and a conversion pass. The "we've been doing this a while" read of the brand.</p>
+      <div class="chips"><span>Bento grid</span><span>Gallery + lightbox</span><span>Testimonials</span><span>Animated counters</span><span>FAQ</span><span>Lead form</span></div>
+    </div>
+  </article>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Scottsdale Sales Training · Package showcase · Prepared June 2026<br>All three are production-grade single-page builds sharing the same content, imagery, and brand voice.</p>
+  </div>
+</footer>
 
 <script>
 (function(){
-  var body=document.body;
-  var bm=document.getElementById('btn-mobile');
-  var bd=document.getElementById('btn-desktop');
-  var sync=document.getElementById('sync');
-  var frames=Array.prototype.slice.call(document.querySelectorAll('.frame'));
+  var DESK={w:1280,h:800},MOB={w:390,h:780};
+  var mode='desk';
+  var cards=Array.prototype.slice.call(document.querySelectorAll('.dcard'));
 
-  function setMode(mobile){
-    body.classList.toggle('mode-mobile',mobile);
-    body.classList.toggle('mode-desktop',!mobile);
-    bm.classList.toggle('on',mobile);
-    bd.classList.toggle('on',!mobile);
-  }
-  bm.addEventListener('click',function(){setMode(true);});
-  bd.addEventListener('click',function(){setMode(false);});
-
-  var locked=false;
-  function attach(){
-    frames.forEach(function(f){
-      var win;
-      try{ win=f.contentWindow; }catch(e){ return; }
-      try{
-        win.addEventListener('scroll',function(){
-          if(!sync.checked||locked) return;
-          locked=true;
-          var src=win.document.documentElement;
-          var max=Math.max(1,src.scrollHeight-win.innerHeight);
-          var ratio=win.scrollY/max;
-          frames.forEach(function(g){
-            if(g===f) return;
-            try{
-              var w=g.contentWindow,d=w.document.documentElement;
-              var m=Math.max(1,d.scrollHeight-w.innerHeight);
-              w.scrollTo(0,ratio*m);
-            }catch(e){}
-          });
-          requestAnimationFrame(function(){locked=false;});
-        },{passive:true});
-      }catch(e){}
+  function layout(){
+    cards.forEach(function(card){
+      var pv=card.querySelector('.preview');
+      var f=pv.querySelector('iframe');
+      var cw=pv.clientWidth;
+      var s,w,h;
+      if(mode==='desk'){
+        w=DESK.w;h=DESK.h;s=cw/w;
+        pv.style.height=(h*s)+'px';
+        if(f){f.style.width=w+'px';f.style.height=h+'px';f.style.transform='scale('+s+')';f.style.left='0px';}
+      }else{
+        w=MOB.w;h=MOB.h;
+        var ph=Math.min(560,cw*0.9);
+        s=ph/h;
+        pv.style.height=ph+'px';
+        if(f){f.style.width=w+'px';f.style.height=h+'px';f.style.transform='scale('+s+')';f.style.left=((cw-w*s)/2)+'px';}
+      }
     });
   }
-  var loaded=0;
-  frames.forEach(function(f){
-    f.addEventListener('load',function(){ loaded++; if(loaded===frames.length) attach(); });
+
+  function spawn(card){
+    var pv=card.querySelector('.preview');
+    if(pv.querySelector('iframe'))return;
+    var f=document.createElement('iframe');
+    f.src=card.getAttribute('data-src');
+    f.title='Live preview';
+    f.loading='lazy';
+    pv.appendChild(f);
+    layout();
+  }
+
+  /* lazily create iframes as cards approach the viewport */
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){if(e.isIntersecting){spawn(e.target);io.unobserve(e.target);}});
+    },{rootMargin:'300px 0px'});
+    cards.forEach(function(c){io.observe(c);});
+  }else{cards.forEach(spawn);}
+
+  /* veil: previews start non-interactive so the page scrolls naturally */
+  cards.forEach(function(card){
+    var pv=card.querySelector('.preview'),veil=pv.querySelector('.veil');
+    function activate(){spawn(card);pv.classList.add('live');}
+    veil.addEventListener('click',activate);
+    veil.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();activate();}});
+    /* leaving the card re-arms the veil so stray scrolls don't get trapped */
+    card.addEventListener('mouseleave',function(){pv.classList.remove('live');});
   });
 
-  sync.addEventListener('change',function(){
-    if(sync.checked){
-      try{
-        var w0=frames[0].contentWindow, d0=w0.document.documentElement;
-        var r=w0.scrollY/Math.max(1,d0.scrollHeight-w0.innerHeight);
-        frames.forEach(function(g){try{var w=g.contentWindow,d=w.document.documentElement;w.scrollTo(0,r*Math.max(1,d.scrollHeight-w.innerHeight));}catch(e){}});
-      }catch(e){}
-    }
-  });
+  /* device toggle */
+  var bd=document.getElementById('segDesk'),bm=document.getElementById('segMob');
+  function setMode(m){
+    mode=m;
+    bd.classList.toggle('on',m==='desk');
+    bm.classList.toggle('on',m==='mob');
+    layout();
+  }
+  bd.addEventListener('click',function(){setMode('desk');});
+  bm.addEventListener('click',function(){setMode('mob');});
+
+  window.addEventListener('resize',layout);
+  layout();
 })();
 </script>
-</body></html>
+</body>
+</html>
