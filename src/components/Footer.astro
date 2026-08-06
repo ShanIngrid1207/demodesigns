@@ -1,5 +1,5 @@
 ---
-import type { SiteSettings } from '../lib/defaults';
+import { canCall, canEmail, type SiteSettings } from '../lib/defaults';
 interface Props { settings: SiteSettings }
 const { settings } = Astro.props;
 ---
@@ -11,7 +11,11 @@ const { settings } = Astro.props;
     </div>
     <div><div class="text-[12px] font-semibold tracking-[0.16em] uppercase text-inkt/40 mb-4">Programs</div><ul class="space-y-2.5 text-[14px] text-inkt/65"><li><a href="/programs/sales-team-workshops" class="hover:text-emerald-light">Team Workshops</a></li><li><a href="/programs/1-on-1-coaching" class="hover:text-emerald-light">1-on-1 Coaching</a></li><li><a href="/programs/sales-leadership" class="hover:text-emerald-light">Leadership</a></li><li><a href="/programs" class="hover:text-emerald-light">All programs</a></li></ul></div>
     <div><div class="text-[12px] font-semibold tracking-[0.16em] uppercase text-inkt/40 mb-4">Company</div><ul class="space-y-2.5 text-[14px] text-inkt/65"><li><a href="/about" class="hover:text-emerald-light">About</a></li><li><a href="/blog" class="hover:text-emerald-light">Insights</a></li><li><a href="/faq" class="hover:text-emerald-light">FAQ</a></li><li><a href="/contact" class="hover:text-emerald-light">Contact</a></li></ul></div>
-    <div><div class="text-[12px] font-semibold tracking-[0.16em] uppercase text-inkt/40 mb-4">Get in touch</div><ul class="space-y-2.5 text-[14px] text-inkt/65"><li><a href={`tel:${settings.tel}`} class="hover:text-emerald-light">{settings.phone}</a></li><li><a href={`mailto:${settings.email}`} class="hover:text-emerald-light">{settings.email}</a></li><li>{settings.address}</li><li>{settings.hours}</li></ul></div>
+    <div><div class="text-[12px] font-semibold tracking-[0.16em] uppercase text-inkt/40 mb-4">Get in touch</div><ul class="space-y-2.5 text-[14px] text-inkt/65">
+      <li>{canCall(settings) ? <a href={`tel:${settings.tel}`} class="hover:text-emerald-light">{settings.phone}</a> : settings.phone}</li>
+      <li>{canEmail(settings) ? <a href={`mailto:${settings.email}`} class="hover:text-emerald-light">{settings.email}</a> : settings.email}</li>
+      <li>{settings.address}</li><li>{settings.hours}</li>
+    </ul></div>
   </div>
   <div class="mt-10 pt-6 border-t border-inkt/10 flex flex-wrap gap-3 justify-between text-[12px] text-inkt/40">
     <span>© <span id="yr">2026</span> Scottsdale Sales Training. All rights reserved.</span><span>Privacy · Terms</span>

@@ -76,10 +76,17 @@ export interface BlogPost {
 const U = (id: string, w: number) =>
   `https://images.unsplash.com/${id}?auto=format&fit=crop&w=${w}&q=80`;
 
+// TEMPORARY — contact channels pulled pending the client's real details.
+// TO RESTORE: put the two lines below back and delete the placeholders. Nothing
+// else needs to change; every component reads these fields.
+//   phone: '(480) 555-1234',  tel: '+14805551234',
+//   email: 'hello@scottsdalesalestraining.com',
+// While `tel` is empty and `email` has no "@", canCall()/canEmail() are false and
+// components render plain non-clickable text in place of the tel:/mailto: links.
 export const DEFAULT_SETTINGS: SiteSettings = {
-  phone: '(480) 555-1234',
-  tel: '+14805551234',
-  email: 'hello@scottsdalesalestraining.com',
+  phone: 'Phone coming soon',
+  tel: '',
+  email: 'Email coming soon',
   address: 'Scottsdale, Arizona',
   hours: 'Mon-Fri 8-5 MST',
   heroSubheadline:
@@ -90,6 +97,11 @@ export const DEFAULT_SETTINGS: SiteSettings = {
   statTrained: '2,500+',
   statRampWeeks: '8 wks',
 };
+
+// Is there a real channel behind the label? When false the UI keeps the row/button
+// exactly where it is but renders `phone`/`email` as plain text instead of a link.
+export const canCall = (s: SiteSettings) => Boolean(s.tel);
+export const canEmail = (s: SiteSettings) => s.email.includes('@');
 
 const para = (text: string) => ({
   _type: 'block',

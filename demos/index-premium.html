@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <title>Scottsdale Sales Training | Sales Coaching &amp; Workshops, Scottsdale AZ</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Practical sales training and coaching in Scottsdale, AZ. Shorten your sales cycle, lift win rates, and build a team that loves to close. Call (480) 555-1234.">
+<meta name="description" content="Practical sales training and coaching in Scottsdale, AZ. Shorten your sales cycle, lift win rates, and build a team that loves to close.">
 <meta name="theme-color" content="#ffffff">
 <meta property="og:title" content="Scottsdale Sales Training | Scottsdale, AZ">
 <meta property="og:description" content="Sales training, coaching and team workshops led by founder Brad. Shorten your cycle and lift win rates. Real, measurable results.">
@@ -351,7 +351,8 @@ tailwind.config = {
         <span class="text-[12px] font-semibold tracking-[0.2em] uppercase text-gold">Get in touch</span>
         <h2 class="h-display text-3xl sm:text-5xl mt-3 text-white">Tell us about <span class="accent">your team</span></h2>
         <p class="mt-5 text-[15px] text-white/65 max-w-md">We'll come back within one business day with a plan, or book a free 20-minute call now.</p>
-        <a href="tel:+14805551234" class="mt-7 inline-flex items-center gap-2 text-[16px] font-medium text-gold hover:text-goldlt"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.6a1 1 0 0 1-.25 1l-2.2 2.2z"/></svg>(480) 555-1234</a>
+        <!-- TEMP: was <a href="tel:+14805551234"> … (480) 555-1234 -->
+        <span class="mt-7 inline-flex items-center gap-2 text-[16px] font-medium text-gold"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.6a1 1 0 0 1-.25 1l-2.2 2.2z"/></svg>Phone coming soon</span>
       </div>
       <form id="leadform" action="/api/lead" method="post" class="space-y-4">
         <input type="text" name="company_website" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true">
@@ -377,7 +378,8 @@ tailwind.config = {
     <div class="relative">
       <h2 class="h-display text-4xl sm:text-6xl max-w-3xl mx-auto">Ready to close <span class="accent">more deals?</span></h2>
       <p class="mt-5 text-[15px] text-white/75 max-w-xl mx-auto">Book a free 20-minute discovery call. We'll map exactly where your team can win more. No pressure, no obligation.</p>
-      <a href="tel:+14805551234" class="pill-shadow-w mt-9 inline-flex items-center gap-2 rounded-full bg-white text-inkt text-[15px] font-medium px-8 py-4 hover:bg-paper transition-colors">
+      <!-- TEMP: href was tel:+14805551234 — points at the form until the number is back -->
+      <a href="#contact" class="pill-shadow-w mt-9 inline-flex items-center gap-2 rounded-full bg-white text-inkt text-[15px] font-medium px-8 py-4 hover:bg-paper transition-colors">
         Book a Discovery Call
         <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </a>
@@ -393,7 +395,7 @@ tailwind.config = {
       </div>
       <div><div class="text-[12px] font-semibold tracking-[0.16em] uppercase text-inkt/40 mb-4">Programs</div><ul class="space-y-2.5 text-[14px] text-inkt/65"><li><a href="#programs" class="hover:text-emerald-light">Team Workshops</a></li><li><a href="#programs" class="hover:text-emerald-light">1-on-1 Coaching</a></li><li><a href="#programs" class="hover:text-emerald-light">Leadership</a></li><li><a href="#programs" class="hover:text-emerald-light">Keynotes</a></li></ul></div>
       <div><div class="text-[12px] font-semibold tracking-[0.16em] uppercase text-inkt/40 mb-4">Company</div><ul class="space-y-2.5 text-[14px] text-inkt/65"><li><a href="#coaches" class="hover:text-emerald-light">Coaches</a></li><li><a href="#results" class="hover:text-emerald-light">Results</a></li><li><a href="#gallery" class="hover:text-emerald-light">Inside the room</a></li><li><a href="#" class="hover:text-emerald-light">FAQ</a></li></ul></div>
-      <div><div class="text-[12px] font-semibold tracking-[0.16em] uppercase text-inkt/40 mb-4">Get in touch</div><ul class="space-y-2.5 text-[14px] text-inkt/65"><li><a href="tel:+14805551234" class="hover:text-emerald-light">(480) 555-1234</a></li><li><a href="mailto:hello@scottsdalesalestraining.com" class="hover:text-emerald-light">hello@scottsdalesalestraining.com</a></li><li>Scottsdale, Arizona</li><li>Mon-Fri 8-5 MST</li></ul></div>
+      <div><div class="text-[12px] font-semibold tracking-[0.16em] uppercase text-inkt/40 mb-4">Get in touch</div><ul class="space-y-2.5 text-[14px] text-inkt/65"><!-- TEMP: rows 1-2 were <a href="tel:+14805551234">(480) 555-1234</a> and <a href="mailto:hello@scottsdalesalestraining.com">hello@scottsdalesalestraining.com</a> --><li>Phone coming soon</li><li>Email coming soon</li><li>Scottsdale, Arizona</li><li>Mon-Fri 8-5 MST</li></ul></div>
     </div>
     <div class="mt-10 pt-6 border-t border-inkt/10 flex flex-wrap gap-3 justify-between text-[12px] text-inkt/40">
       <span>© <span id="yr">2026</span> Scottsdale Sales Training. All rights reserved.</span><span>Privacy · Terms</span>
@@ -479,7 +481,7 @@ tailwind.config = {
 </script>
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"LocalBusiness","name":"Scottsdale Sales Training","description":"Sales training, coaching and team workshops in Scottsdale, Arizona.","areaServed":"Scottsdale, AZ","telephone":"+1-480-555-1234","email":"hello@scottsdalesalestraining.com","address":{"@type":"PostalAddress","addressLocality":"Scottsdale","addressRegion":"AZ","addressCountry":"US"},"openingHours":"Mo-Fr 08:00-17:00","founder":{"@type":"Person","name":"Brad","jobTitle":"Founder & Head Coach"}}
+{"@context":"https://schema.org","@type":"LocalBusiness","name":"Scottsdale Sales Training","description":"Sales training, coaching and team workshops in Scottsdale, Arizona.","areaServed":"Scottsdale, AZ","address":{"@type":"PostalAddress","addressLocality":"Scottsdale","addressRegion":"AZ","addressCountry":"US"},"openingHours":"Mo-Fr 08:00-17:00","founder":{"@type":"Person","name":"Brad","jobTitle":"Founder & Head Coach"}}
 </script>
 </body>
 </html>

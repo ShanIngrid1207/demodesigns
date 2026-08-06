@@ -1,5 +1,5 @@
 ---
-import type { SiteSettings } from '../lib/defaults';
+import { canCall, type SiteSettings } from '../lib/defaults';
 interface Props { settings: SiteSettings }
 const { settings } = Astro.props;
 ---
@@ -8,7 +8,7 @@ const { settings } = Astro.props;
   <div class="relative">
     <h2 class="h-display text-4xl sm:text-6xl max-w-3xl mx-auto">Ready to close <span class="accent">more deals?</span></h2>
     <p class="mt-5 text-[15px] text-white/75 max-w-xl mx-auto">Book a free 20-minute discovery call. We'll map exactly where your team can win more. No pressure, no obligation.</p>
-    <a href={`tel:${settings.tel}`} class="pill-shadow-w mt-9 inline-flex items-center gap-2 rounded-full bg-white text-inkt text-[15px] font-medium px-8 py-4 hover:bg-paper transition-colors">
+    <a href={canCall(settings) ? `tel:${settings.tel}` : '/contact'} class="pill-shadow-w mt-9 inline-flex items-center gap-2 rounded-full bg-white text-inkt text-[15px] font-medium px-8 py-4 hover:bg-paper transition-colors">
       Book a Discovery Call
       <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
     </a>

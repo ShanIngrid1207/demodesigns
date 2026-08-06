@@ -13,7 +13,12 @@ import {
   type CaseStudy, type GalleryImage, type BlogPost,
 } from './defaults';
 
-const telFrom = (phone: string) => '+1' + (phone || '').replace(/\D/g, '');
+// Returns '' for a phone field that holds no digits (e.g. the "Phone coming soon"
+// placeholder), so canCall() correctly reports there is nothing to dial.
+const telFrom = (phone: string) => {
+  const digits = (phone || '').replace(/\D/g, '');
+  return digits ? '+1' + digits : '';
+};
 
 export async function getSiteSettings(): Promise<SiteSettings> {
   const D = DEFAULT_SETTINGS;

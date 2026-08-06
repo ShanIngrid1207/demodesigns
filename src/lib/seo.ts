@@ -1,4 +1,4 @@
-import type { SiteSettings, BlogPost } from './defaults';
+import { canCall, canEmail, type SiteSettings, type BlogPost } from './defaults';
 
 const BUSINESS = 'Scottsdale Sales Training';
 
@@ -9,8 +9,10 @@ export function localBusinessJsonLd(s: SiteSettings, siteUrl: string): string {
     name: BUSINESS,
     description: 'Sales training, coaching and team workshops in Scottsdale, Arizona.',
     areaServed: s.address || 'Scottsdale, AZ',
-    telephone: s.tel,
-    email: s.email,
+    // Omitted entirely rather than emitted as a placeholder — a LocalBusiness with
+    // a bogus telephone/email is worse for SEO than one with neither.
+    telephone: canCall(s) ? s.tel : undefined,
+    email: canEmail(s) ? s.email : undefined,
     url: siteUrl,
     address: {
       '@type': 'PostalAddress',

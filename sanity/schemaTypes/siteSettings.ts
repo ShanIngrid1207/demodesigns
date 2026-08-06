@@ -10,7 +10,7 @@ export default defineType({
     { name: 'stats', title: 'Stat numbers' },
   ],
   fields: [
-    defineField({ name: 'phone', title: 'Phone number', type: 'string', description: 'e.g. (480) 555-1234', group: 'contact', validation: (r) => r.required() }),
+    defineField({ name: 'phone', title: 'Phone number', type: 'string', description: 'Format: (480) 000-0000', group: 'contact', validation: (r) => r.required() }),
     defineField({ name: 'email', title: 'Email address', type: 'string', group: 'contact', validation: (r) => r.required() }),
     defineField({ name: 'address', title: 'City / area', type: 'string', description: 'e.g. Scottsdale, Arizona', group: 'contact' }),
     defineField({ name: 'hours', title: 'Opening hours', type: 'string', description: 'e.g. Mon-Fri 8-5 MST', group: 'contact' }),

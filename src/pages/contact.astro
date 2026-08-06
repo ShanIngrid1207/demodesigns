@@ -4,18 +4,24 @@ import Header from '../components/Header.astro';
 import LeadForm from '../components/LeadForm.astro';
 import Footer from '../components/Footer.astro';
 import { getSiteSettings } from '../lib/queries';
+import { canCall, canEmail } from '../lib/defaults';
 
 const settings = await getSiteSettings();
+// href is left undefined when the channel is a placeholder — the card below then
+// renders the value as plain text instead of a dead tel:/mailto: link.
 const details = [
-  { label: 'Call us', value: settings.phone, href: `tel:${settings.tel}` },
-  { label: 'Email us', value: settings.email, href: `mailto:${settings.email}` },
+  { label: 'Call us', value: settings.phone, href: canCall(settings) ? `tel:${settings.tel}` : undefined },
+  { label: 'Email us', value: settings.email, href: canEmail(settings) ? `mailto:${settings.email}` : undefined },
   { label: 'Where', value: settings.address },
   { label: 'Hours', value: settings.hours },
 ];
+const description = canCall(settings)
+  ? `Talk to Scottsdale Sales Training about your team. Call ${settings.phone} or send us a note and we'll come back within one business day.`
+  : `Talk to Scottsdale Sales Training about your team. Send us a note and we'll come back within one business day.`;
 ---
 <Base
   title="Contact | Scottsdale Sales Training"
-  description={`Talk to Scottsdale Sales Training about your team. Call ${settings.phone} or send us a note and we'll come back within one business day.`}
+  description={description}
 >
   <Header settings={settings} />
 
